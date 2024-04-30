@@ -115,13 +115,13 @@ function logic() {
                         gate = false
                     }
                     count++
-                    console.log(threshold, num, count)
+                    
                 }
 
-                console.log(threshold, num)
+                
                 threshold -= 10
                 count--
-                console.log(threshold, num)
+                
                 let phrase 
                 
                 if (num > threshold) {
@@ -130,7 +130,7 @@ function logic() {
                 }else{
                     threshold -= 10
                     phrase = 'lé'
-                    console.log(threshold, num)
+                    
                 }
                 let unit = Math.abs(num - threshold)
                 
