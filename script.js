@@ -40,39 +40,42 @@ function logic() {
         else if (input > 15 && input < 200) {
             if (input % 10 == 0) {
                 result = tens[input / 10]
-            }
-            let count = 0
-            let threshold
-            let gate = false
-            for (threshold = 15; gate == false; threshold += 10) {
-                
-                
-                if (threshold > input) {
-                    gate = true
-                }
-                
-                else{
-                    gate = false
+            }else{
+            
+                let count = 0
+                let threshold
+                let gate = false
+                for (threshold = 15; gate == false; threshold += 10) {
+                    
+                    
+                    if (threshold > input) {
+                        gate = true
+                    }
+                    
+                    else{
+                        gate = false
+                        
+                    }
+                    count++
                     
                 }
-                count++
-                
-            }
-            threshold -= 15
+                threshold -= 15
 
-            let unit = Math.abs(input-threshold)
+                let unit = Math.abs(input-threshold)
 
-            let phrase
-            if (input > threshold) {
-                phrase = 'lé'
-            }else{
-                phrase = 'dín'
-            }
+                let phrase
+                if (input > threshold) {
+                    phrase = 'lé'
+                }else{
+                    phrase = 'dín'
+                }
 
-            if (input > 194) {
-                result = tens[count] + '-o-' + phrase + '-' +digits[unit]
-            }else{
-                result = digits[unit] + '-' + phrase + '-l' + tens[count]
+                if (input > 194) {
+                    result = tens[count] + '-o-' + phrase + '-' +digits[unit]
+                }else{
+                    result = digits[unit] + '-' + phrase + '-l' + tens[count]
+                }
+
             }
 
             
