@@ -1,8 +1,8 @@
 let $id = (id) => document.getElementById(id)
 const digits = ['odo', 'okan', 'méjì', 'mẹ́ta', 'mẹ́rin', 'márùn-ún', 'mẹ́fà', 'méje', 'mẹ́jọ', 'mẹ́sán-án', 'mẹ́wàá','mọ̀kànlá','méjìlá', 'mẹ́tàlá', 'mẹ́rìnlá']
 const tens = ['odo','mẹ́wàá','ogún', 'ọgbọ̀n', 'ogójì', 'àádọ́ta', 'ọgọ́ta', 'àádọ́rin', 'ọgọ́rin', 'àádọ̀rún', 'ọgọ́rùn-ún', 'àádọ́fà', 'ọgọ́fà', 'àádóje', 'ogóje', 'àádọ́jọ', 'ọgọ́jọ', 'àádọ́sàn-án', 'ọgọ́sàn-án', 'àádọ́wàá', 'igba']
-const hundreds = ['odo', 'ọgọ́rùn-ún', 'igba', 'ọ́ọ̀dúnrún', 'irinwó', 'ẹ̀ẹ́dẹ́gbẹ̀ta', 'ẹgbẹ̀ta', 'ẹ̀ẹ́dẹ̀gbẹ̀rin', 'ẹgbẹ̀rin', 'ẹ̀ẹ́dẹ́gbàárun', 'ẹ̀gbẹ̀rún']
-const suffixHundreds = ['odo', 'lọgọ́rùn-ún', 'rugba', 'lọ́ọ̀dúnrún', 'nirinwó', 'lẹ̀ẹ́dẹ́gbẹ̀ta', 'lẹgbẹ̀ta', 'lẹ̀ẹ́dẹ̀gbẹ̀rin', 'lẹgbẹ̀rin', 'lẹ̀ẹ́dẹ́gbàárun', 'lẹ̀gbẹ̀rún']
+const hundreds = ['odo', 'ọgọ́rùn-ún', 'igba', 'ọ́ọ̀dúnrún', 'irinwó', 'ẹ̀ẹ́dẹ́gbẹ̀ta', 'ẹgbẹ̀ta', 'ẹ̀ẹ́dẹ̀gbẹ̀rin', 'ẹgbẹ̀rin', 'ẹ̀ẹ́dẹ́gbàárun', 'ẹ̀gbẹ̀rún', 'ẹ̀ẹ́dẹ́gbẹ̀fà', 'ẹgbẹ̀fà', 'ẹ̀ẹ́dẹ́gbéje', 'egbèje', 'ẹ̀ẹ́dẹ́gbẹ̀jọ', 'ẹgbẹ̀jọ', 'ẹ̀ẹ́dẹ́gbẹ̀sán', 'ẹgbẹ̀sán', 'ẹ̀ẹ́dẹ́gbẹ̀wàá', 'ẹgbẹ̀wàá']
+const suffixHundreds = ['odo', 'lọgọ́rùn-ún', 'rugba', 'lọ́ọ̀dúnrún', 'nirinwó', 'lẹ̀ẹ́dẹ́gbẹ̀ta', 'lẹgbẹ̀ta', 'lẹ̀ẹ́dẹ̀gbẹ̀rin', 'lẹgbẹ̀rin', 'lẹ̀ẹ́dẹ́gbàárun', 'lẹ̀gbẹ̀rún', 'lẹ̀ẹ́dẹ́gbẹ̀fà', 'lẹgbẹ̀fà', 'lẹ̀ẹ́dẹ́gbéje', 'legbèje', 'lẹ̀ẹ́dẹ́gbẹ̀jọ', 'lẹgbẹ̀jọ', 'lẹ̀ẹ́dẹ́gbẹ̀sán', 'lẹgbẹ̀sán', 'lẹ̀ẹ́dẹ́gbẹ̀wàá', 'lẹgbẹ̀wàá']
 const evenTens = ['okòó', 'òjì', 'ọ̀tà', 'ọ̀rìn']
 
 
@@ -18,7 +18,7 @@ function logic() {
         alert('Enter a number')
         state = false
     }
-    else if (input > 1000) {
+    else if (input > 2000) {
         alert('Number greater than 100')
         $id('input').value = ''
         state = false
@@ -85,7 +85,7 @@ function logic() {
             let num = input % 100
             let hundred = hundreds[(input - num) / 100]
             let suffixHundred = suffixHundreds[(input - num) / 100]
-            console.log(num, hundred, input);
+            
 
 
             if(num == 0){
